@@ -1,0 +1,106 @@
+
+# set to yes if you want Conky to be forked in the background
+background yes
+
+short_units yes
+
+cpu_avg_samples 2
+out_to_console no
+
+# X font when Xft is disabled, you can pick one with program xfontsel
+#font 7x12
+font 6x10
+#font 0X0
+#font 7x13
+# font 8x12
+#font 7x12
+#font *mintsmild.se*
+#font -*-*-*-*-*-*-34-*-*-*-*-*-*-*
+#font -artwiz-snap-normal-r-normal-*-*-100-*-*-p-*-iso8859-1
+
+# Use Xft?
+use_xft yes
+
+# Xft font when Xft is enabled
+#xftfont gentium:size=12
+#ftfont DejaVu Sans:size=3
+xftfont DejaVu Sans:bold:size=9
+
+# Create own window instead of using desktop (required in nautilus, pcmanfm and rox desktops)
+own_window yes
+own_window_transparent no
+#esto estaba habilitado
+own_window_hints undecorated,below,sticky,slip_taskbar
+#own_window_type desktop
+own_window_type panel
+#own_window_hints above
+#default_bar_size 0
+#border_outer_margin 0
+own_window_colour 101010
+
+# Text alpha when using Xft
+xftalpha 1.0
+
+#on_bottom no
+
+# Update interval in seconds
+update_interval 2
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Minimum size of text area
+minimum_size 5 5
+maximum_width 500
+#maximum_height 10
+# Draw shades?
+draw_shades no
+border_inner_margin 0
+border_outer_margin 0
+# Draw outlines?
+#draw_outline yes
+
+# Draw borders around text
+draw_borders no
+# Stippled borders?
+#stippled_borders 0
+
+# border margins
+#border_margin 10
+
+# border width
+border_width 0
+
+# Default colors and also border colors
+default_color 353535
+
+color7 353535
+color1 3D7582
+color3 59C6DC
+color5 197D91
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_right
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+gap_x 20
+gap_y 0
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer right
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+#temperatura=$(echo -n $(sensors | grep "Core" | cut -b 16-19))
+#vol=$(amixer -c 0 get Master | tail -n 2 | cut -d '[' -f 2 | sed 's/%.*//g' | sed -n 1p)
+
+TEXT
+#${color}Heat:${alignr}${color3}cpu_temp=$(< /sys/class/thermal/thermal_zone0/temp); cpu_temp=$(($cpu_temp/1000));echo $cpu_tempºC
+${color5}◑  ${alignr}${color3}${cpu}${color3}%${color3}  ⛃ ${alignr}$mem ${color3} ◖⚟${exec amixer -c 0 get Master | grep Mono: | cut -d " " -f6}  ƭ ${hwmon 0 temp 1}°C  ${time %I:%M} ${color3}${alignc} ${time %a %d %b}
