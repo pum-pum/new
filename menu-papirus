@@ -1,0 +1,79 @@
+[begin] (--antiX--)
+    [exec] (Terminal) {desktop-defaults-run -t} </usr/share/icons/papirus-antix/48x48/apps/terminal.png>
+    [exec] (Archivos) {desktop-defaults-run -fm} </usr/share/icons/papirus-antix/48x48/apps/file-manager.png>
+    [separator]
+    [exec] (Buscador Web) {desktop-defaults-run -b} </usr/share/icons/papirus-antix/48x48/apps/web-browser.png>
+    [exec] (Editor) {desktop-defaults-run -te} </usr/share/icons/papirus-antix/48x48/apps/text-editor.png>
+    [exec] (App Select) {/usr/local/bin/app-select} </usr/share/icons/papirus-antix/48x48/apps/gnome-searchtool.png>
+    [separator]
+    [submenu] (Personal) </usr/share/icons/papirus-antix/48x48/apps/preferences-desktop-user.png>
+        [begin] (Personal)
+        [include] (~/.fluxbox/personal)
+    [end]
+    [submenu] (Aplicaciones) </usr/share/icons/papirus-antix/48x48/apps/applications.png>
+        [begin] (Aplicaciones)
+        [include] (~/.fluxbox/menu-applications)
+    [end]
+    [exec] (Actualizar menú) {desktop-menu --write-out-global} </usr/share/icons/papirus-antix/48x48/apps/update-manager.png>
+    [separator]
+    [submenu] (Escritorio) </usr/share/icons/papirus-antix/48x48/apps/user-desktop.png>
+        [submenu] (Alternar Escritorios) </usr/share/icons/papirus-antix/48x48/apps/user-desktop.png>
+            [begin] (Alternar Escritorios)
+            [include] (/usr/share/desktop-session/wm-menus/fluxbox-wm-menu)
+        [end]
+        [exec] (RoxPanel on/off) {paneltoggle.sh} </usr/share/icons/papirus-antix/48x48/apps/gnome-panel.png>
+        [exec] (Conky on/off) {conkytoggle.sh} </usr/share/icons/papirus-antix/48x48/apps/utilities-system-monitor.png>
+    [end]
+    [separator]
+        [exec] (Cancelar Apps) {xkill} </usr/share/icons/papirus-antix/48x48/apps/appkill.png>
+    [exec] (Centro de Control) {antixcc.sh} </usr/share/icons/papirus-antix/48x48/apps/control-center2.png>
+    [separator]
+    [submenu] (Ayuda) </usr/share/icons/papirus-antix/48x48/apps/help-browser.png>
+        [submenu] (antiX) </usr/share/icons/papirus-antix/48x48/places/folder.png>
+            [exec] (antiX Videos) {dillo /usr/share/antiX/antix_help_videos.html}
+            [exec] (Preguntas frecuentes) {dillo /usr/share/antiX/FAQ/index.html}
+            [exec] (Live Tutorial) {dillo /usr/share/antiX/Boot_Menu/antiX-gfxboot.html}
+            [separator]
+            [exec] (Rox Manual) {dillo /usr/share/doc/rox-filer/html/Manual.html}
+            [exec] (Announcements) {dillo https://www.antixforum.com/forums/forum/news/announcements/}
+            [exec] (antixforum.com) {dillo https://www.antixforum.com}
+            [exec] (MX/antiX Wiki) {dillo https://mxlinux.org/wiki/}
+        [end]
+        [separator]
+        [submenu] (Fluxbox) </usr/share/icons/papirus-antix/48x48/places/folder.png>
+            [exec] (Fluxbox Docs) {dillo http://fluxbox.sourceforge.net/docbook/en/html/}
+            [exec] (Fluxbox FAQ) {dillo http://fluxbox-wiki.org/FAQ_en.html}
+            [exec] (Fluxbox Wiki) {dillo http://fluxbox-wiki.org/}
+            [separator]
+            [exec] (Arch Wiki) {dillo http://wiki.archlinux.org/index.php/Fluxbox}
+        [end]
+        [separator]
+        [submenu] (Aplicaciones) </usr/share/icons/papirus-antix/48x48/places/folder.png>
+            [exec] (Firewall) {dillo http://gufw.org/}
+            [exec] (Partimage) {dillo http://www.partimage.org/Partimage-manual_Usage}
+        [end]
+        [submenu] (Manuales) </usr/share/icons/papirus-antix/48x48/places/folder.png>
+            [exec] (Irssi) {desktop-defaults-run -t man irssi}
+            [exec] (mc) {desktop-defaults-run -t man mc}
+            [exec] (mocp) {desktop-defaults-run -t man mocp}
+            [exec] (Nano) {desktop-defaults-run -t man nano}
+            [exec] (Rss/Atom) {desktop-defaults-run -t man newsboat}
+            [exec] (Terminal) {desktop-defaults-run -t man urxvt}
+            [exec] (Torrent) {desktop-defaults-run -t man rtorrent}
+        [end]
+    [end]
+    [exec] (Ejecutar) {gexec} </usr/share/icons/papirus-antix/48x48/apps/gnome-run.png>
+    [submenu] (Ajustes Fluxbox) </usr/share/icons/papirus-antix/48x48/apps/applications-system.png>
+        [config] (Configuración)
+        [submenu] (Estilos) <Style>
+            [stylesdir] (~/.fluxbox/styles)
+            [stylesmenu] (Estilos Fluxbox) {/usr/share/fluxbox/styles}
+        [end]
+        [workspaces] (Espacios de trabajo)
+        [separator]
+        [reconfig] (Reconfigurar)
+        [restart] (Reiniciar)
+    [end]
+    [exec] (Salir) {desktop-session-exit} </usr/share/icons/papirus-antix/48x48/apps/application-exit.png>
+    [exec] (Instalador) {sudo minstall} </usr/share/icons/msystem.png>
+[end]

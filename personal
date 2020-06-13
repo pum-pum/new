@@ -1,0 +1,9 @@
+
+[exec] (Date and Time) {/usr/local/bin/set_time-and_date.sh} </usr/share/icons/papirus-antix/48x48/apps/time.png>
+[exec] (IceWM Toolbar Icon Manager) {/usr/local/bin/icewm-toolbar-icon-manager.sh} </usr/share/icons/papirus-antix/48x48/apps/icewm_editor.png>
+[exec] (JWM Tray Icon Manager) {/usr/local/bin/jwm-tray-icon-manager.sh} </usr/share/pixmaps/jwm_editor.png>
+[exec] (Rápido Gestor de Menús Personales) {/usr/local/bin/fast_personal_menu_editor.sh} </usr/share/icons/papirus-antix/48x48/apps/icewm_peditor.png>
+[exec] (ROXTerm) {roxterm} </usr/share/icons/papirus-antix/48x48/apps/roxterm.png>
+[exec] (urxvt) {urxvt} </usr/share/icons/papirus-antix/48x48/apps/terminal.png>
+[exec] (yad-color) {yad-color} </usr/share/icons/papirus-antix/48x48/apps/gcolor2.png>
+
