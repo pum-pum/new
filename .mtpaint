@@ -1,0 +1,25 @@
+# Remove this file to restore default settings.
+
+undoMBlimit = 512
+window_w = 1356
+window_h = 369
+toolbar_settings_x = 5
+toolbar_settings_y = 392
+toolbar_settings_w = 676
+toolbar_settings_h = 369
+toolbar3 = false
+fpick_col2 = 78
+fpick_dir_0 = /usr/share/wallpaper/
+fpick_dir_3 = /usr/share/
+fpick_dir_4 = /usr/
+fpick_dir_5 = /
+fpick_dir_6 = /home/
+fs_window_y = 16
+file2 = /usr/share/wallpaper/bombilla.jpg
+file3 = /usr/share/wallpaper/california.jpg
+file4 = /usr/share/wallpaper/arena-negra.jpg
+file5 = /usr/share/wallpaper/autumn.jpg
+fs_window_w = 767
+window_x = 3
+window_y = 392
+dockSize = 355
