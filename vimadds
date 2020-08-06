@@ -46,3 +46,6 @@ nnoremap <C-w>h <C-w>s
 nnoremap <Space> ZZ
 "exit discarding changes
 nnoremap - ZQ
+"exit edit mode to normal mode
+:imap ii <Esc>
+
