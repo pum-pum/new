@@ -34,4 +34,11 @@ endfunction
 vmap <F6> :!xclip -f -sel clip<CR>
 map <F7> :-1r !xclip -o -sel clip<CR>
 
-
+"some remaps until I change my mind
+"easier split changing
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+"split horizontal
+nnoremap <C-w>h <C-w>s
