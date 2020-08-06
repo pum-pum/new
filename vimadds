@@ -42,3 +42,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 "split horizontal
 nnoremap <C-w>h <C-w>s
+"exit saving
+nnoremap <Space> ZZ
+"exit discarding changes
+nnoremap - ZQ
