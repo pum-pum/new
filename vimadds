@@ -72,3 +72,17 @@ normal G
 endfunction
 autocmd BufNewFile *.sh call BufNewFile_sh()
 
+set splitright " abre division a la derecha en split
+set splitbelow " abre division abajo en split
+
+map <C-A> ggVG "selecciona todo
+
+nnoremap E $ "remapeo a final de linea (el original supongo que lo usa por regex como sed)
+nnoremap B ^ "remapeo a inicio de linea
+nnoremap U <C-R> "remapeo a rehacer
+set incsearch " busca mientras se teclea
+set cursorline "sobresalta linea actual
+
+set scrolloff=10 " esto es una maravilla, no pega el cursor a los bordes a no ser que se encuentre a comiebzo y final del archivo (configuracion de diez lineas)
+
+
