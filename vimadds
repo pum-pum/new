@@ -66,3 +66,9 @@ normal G
 endfunction
 autocmd BufNewFile *.py call BufNewFile_PY()
 
+function BufNewFile_sh()
+0put = '#!/usr/bin/env sh'
+normal G
+endfunction
+autocmd BufNewFile *.sh call BufNewFile_sh()
+
