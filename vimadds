@@ -49,3 +49,10 @@ nnoremap - ZQ
 "exit edit mode to normal mode
 :imap ii <Esc>
 
+"autocomplete doubble elements
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+
