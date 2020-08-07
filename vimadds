@@ -56,3 +56,13 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 
+"lanza shellcheck para el archivo actual dentro de vim
+map <leader>s :!clear && shellcheck %<CR>
+
+"creando un archivo nuevo, añade la primera linea especificando el interprete de programacion a correr
+function BufNewFile_PY()
+0put = '#!/usr/bin/env python'
+normal G
+endfunction
+autocmd BufNewFile *.py call BufNewFile_PY()
+
