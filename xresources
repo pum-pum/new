@@ -1,0 +1,98 @@
+!!!--- urxvt settings
+
+!!!--- Font and general settings 
+
+!URxvt*.font:  xft:DejaVu Sans Mono:autohint=true:size=11
+!URxvt*.font: xft:Bitstream Vera Sans Mono 11:autohint=true:size=11
+!URxvt*.font:  xft:Inconsolata Nerd Font:autohint=true:size=11:style=regular
+!URxvt*.font:  xft:Inconsolata Nerd Font:autohint=true:size=11:style=regular
+URxvt*.font:  xft:CaskaydiaCove Nerd Font Mono:autohint=true:size=10:style=regular
+!URxvt*.font:  xft:Inconsolata Nerd Font:autohint=true:size=11:style=medium
+!URxvt*.font:  xft:RobotoMono Nerd Font:autohint=true:size=11:style=Regular
+!URxvt*.font:  xft:Inconsolata Nerd Font:autohint=true:size=11:style=Regular
+!URxvt*.font:  xft:Hack Nerd Font Mono:autohint=true:size=10:style=Regular
+
+!URxvt*.geometry:              90x32
+URxvt*.buffered:              true
+
+!!!--- Special features
+!URxvt*.perl-lib:              /usr/local/lib/urxvt/perl
+URxvt*.perl-lib:	      /home/gon/.urxvt/ext/
+URxvt*.perl-ext-common:       default,matcher,resize-font
+!URxvt*.perl-ext-common:       keyboard-select
+!URxvt*.perl-ext-common:       default,matcher,font-size,keyboard-select,resize-font
+
+!atajos de teclado
+
+URxvt*.keysym.M-Escape: perl:keyboard-select:activate
+URxvt*.keysym.C-plus:       resize-font:bigger
+URxvt*.keysym.C-minus:       resize-font:smaller
+
+!extension resize-font
+!URxvt.keysym.C-j:	resize-font:smaller
+!URxvt.keysym.C-k:	resize-font:bigger
+URxvt.keysym.C-equal:	resize-font:reset
+URxvt.resize-font.step: 2
+
+!--- URL Matcher
+URxvt*.url-launcher:          /etc/alternatives/www-browser
+
+URxvt*.matcher.button:        1
+URxvt*.keysym.C-Delete:       perl:matcher:last
+URxvt*.keysym.M-Delete:       perl:matcher:list
+
+URxvt*.keysym.M-s: perl:keyboard-select:search
+
+! Disable ISO 14755 unicode input so we can use Ctrl-Shift bindings
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+
+! Disable Ctrl-Alt-c & Ctrl-Alt-v bindings (optional)
+URxvt.keysym.C-M-c:    builtin-string:
+URxvt.keysym.C-M-v:    builtin-string:
+
+! Bind Ctrl-Shift-c & Ctrl-Shift-v to copy and paste
+! I dont know why, but I needed to use hex keysym values to get it to work
+URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
+URxvt.keysym.C-S-0x56: eval:paste_clipboard
+
+!--- Scrolling
+URxvt*.scrollBar:             false
+URxvt*.scrollBar_right:       false
+URxvt*.scrollTtyOutput:       false
+URxvt*.scrollWithBuffer:      false
+URxvt*.scrollTtyKeypress:     true
+URxvt*.secondaryScroll:       true
+URxvt*.scrollBar_floating:    true
+URxvt*.scrollstyle:           rxvt
+URxvt*.saveLines:             10000
+!URxvt*.searchable-scrollback: M-s
+URxvt*.searchable-scrollback: S-Up
+
+!-- Shading and Fading
+URxvt*.transparent:           false
+URxvt*.shading:               50
+!URxvt*.fading:                30
+!URxvt*.blurRadius:            0
+URxvt*inheritPixmap: false
+
+!--- Tabbing Menu colors
+URxvt*.tabbed.tabbar-bg:      0
+URxvt*.tabbed.tabbar-fg:      6
+URxvt*.tabbed.tab-bg:         0
+URxvt*.tabbed.tab-fg:         5
+
+!URxvt*depth:      32                                                                                                                                                        
+!URxvt.background: 	[05]#e311a1 
+URxvt*.background:           [90]#000000
+URxvt*foreground:            #c0e5f1
+URxvt*.underlineColor:       #4ad5e1
+URxvt*.pointerColor:         #dc74d1
+URxvt*.cursorColor:          #e0e080
+
+Sxiv.background: #222222
+Sxiv.foregroung: #bbbbbb
+
+!no estoy seguro de lo que hace esto, si afecta a otros programas y en tal caso no se de forma, si hay fallo (primero mirar aqui)
+*foreground: rgb:e5/e5/e5
+*background: rgb:00/00/00
