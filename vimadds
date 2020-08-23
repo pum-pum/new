@@ -49,6 +49,14 @@ nnoremap - ZQ
 "exit edit mode to normal mode
 :imap ii <Esc>
 
+"avoid pressing shift to enter command mode
+nnoremap . :
+
+nnoremap f :find
+
+"tab-tab to view opened buffers
+nnoremap <Tab> :b 
+
 "autocomplete doubble elements
 inoremap " ""<left>
 inoremap ' ''<left>
